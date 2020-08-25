@@ -2,14 +2,14 @@ import React from 'react';
 import Card from './Card'
 import './List.css';
 
-export default function List({header, cards}) {
+export default function List(props) {
   return (
     <section className='List'>
       <header className='List-header'>
-        <h2>{header}</h2>
+        <h2>{props.header}</h2>
       </header>
       <div className='List-cards'>
-        {cards.map((card) =>
+        {props.cards.map((card) =>
           <Card
             key={card.id}
             title={card.title}
